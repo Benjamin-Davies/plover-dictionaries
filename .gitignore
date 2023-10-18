@@ -1,0 +1,9 @@
+external/
+private/
+
+commands.json
+main.json
+user.json
+
+*.cfg
+*.log
