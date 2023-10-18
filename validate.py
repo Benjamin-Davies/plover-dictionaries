@@ -8,6 +8,8 @@ import sys
 
 STENO_ORDER = "STKPWHRAO*EUFRPBLGTSDZ"
 
+MIDDLE = STENO_ORDER.index("*")
+
 
 def is_steno_stroke(stroke: str) -> bool:
     """
@@ -25,8 +27,8 @@ def steno_indices(stroke: str) -> list[int]:
     indices = []
     for char in stroke:
         if char == "-":
-            # Treat hyphens as asterisks for the purposes of validation and ordering.
-            char = "*"
+            min_index = MIDDLE + 1
+            continue
         elif char == "/":
             # Reset the minimum index for the next stroke.
             min_index = 0
