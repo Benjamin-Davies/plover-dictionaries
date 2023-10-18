@@ -6,30 +6,49 @@ steno order.
 import json
 import sys
 
-STENO_ORDER = "STKPWHRAO*EUFRPBLGTSDZ"
-
+STENO_ORDER = "#STKPWHRAO*EUFRPBLGTSDZ"
+NUMBER_KEYS = "OSTPHAFPLT"
 MIDDLE = STENO_ORDER.index("*")
 
 
-def is_steno_stroke(stroke: str) -> bool:
+def process_numbers(stroke: str) -> str:
     """
-    Returns True if the stroke is in steno order, False otherwise.
+    Replaces numbers with the corresponding steno characters.
     """
-    indices = steno_indices(stroke)
-    return all((index != -1 for index in indices))
+    if "/" in stroke:
+        return "/".join(map(process_numbers, stroke.split("/")))
+
+    if stroke[0] == "#":
+        is_number = True
+        stroke = stroke[1:]
+    else:
+        is_number = False
+
+    for index, char in enumerate(stroke):
+        if char.isdigit():
+            stroke = stroke[:index] + NUMBER_KEYS[int(char)] + stroke[index + 1 :]
+            is_number = True
+
+    if is_number:
+        stroke = "#" + stroke
+
+    return stroke
 
 
-def steno_indices(stroke: str) -> list[int]:
+def steno_indices(key: str) -> list[int]:
     """
     Returns a list of indices for the given steno stroke.
     """
+    key = process_numbers(key)
     min_index = 0
     indices = []
-    for char in stroke:
+    for char in key:
         if char == "-":
+            # Skip to the middle and don't count this char.
             min_index = MIDDLE + 1
             continue
-        elif char == "/":
+
+        if char == "/":
             # Reset the minimum index for the next stroke.
             min_index = 0
 
@@ -39,6 +58,14 @@ def steno_indices(stroke: str) -> list[int]:
             min_index = index + 1
 
     return indices
+
+
+def is_steno_stroke(stroke: str) -> bool:
+    """
+    Returns True if the stroke is in steno order, False otherwise.
+    """
+    indices = steno_indices(stroke)
+    return all((index != -1 for index in indices))
 
 
 def validate_dictionary(filename: str):
