@@ -36,7 +36,8 @@ The word lists I used are:
 - https://www.maorilanguage.net/maori-words-phrases/greetings-mihi/
 - https://www.maorilanguage.net/maori-words-phrases/maori-words-used-new-zealand-english/
 - https://nzhistory.govt.nz/culture/maori-language-week/100-maori-words
+- https://www.maorilanguage.net/maori-words-phrases/place-names-new-zealand-ingoa-wahi-o-aotearoa/
 
 I have also included some other words that I hear used frequently. I have omitted single letter words and particles, as they would be identical to the fingerspelling. I have also omitted some words that also appear in the Plover default dictionaries.
 
-Place names are in a separate dictionary.
+Place names are in a separate dictionary. I have also included more place names for Tauranga and Christchurch, as these are the places I have lived.
