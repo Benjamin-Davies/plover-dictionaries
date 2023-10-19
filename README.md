@@ -23,7 +23,7 @@ Vowels are also as written, with the same chord for both long and short vowels.
 
 Any other combinations of vowels are split across separate moras. I have added briefs for the multisylabic affixes "whaka-" and "-tanga", but otherwise have made no effort to condense the length of words or phrases.
 
-Macrons are fingerspelt with "\*P" and "\*RP" (think macRon and macRon uPper case).
+Macrons are prefixed with "PH*BG" when fingerspelling (think MaCron).
 
 I have also made a minimal effort to avoid conflicts with Plover's default dictionaries.
 
