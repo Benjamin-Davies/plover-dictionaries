@@ -1,0 +1,22 @@
+{
+"TAPBGSD": "{^tanga}",
+"TAGSD/TKPWAGSD": "{^tanga}",
+"KAOEU": "kai",
+"KAOEUGSD": "kai",
+"KAEUGSD": "{kai^}",
+"KA*EUGSD": "{kai^}",
+"KO*GSD": "{ko^}",
+"WHABGSD": "{whaka^}",
+"WHAGSD/KAGSD": "{whaka^}",
+"AO*": "Aotearoa",
+"A*GSD": "ā",
+"A*PGSD": "Ā",
+"O*GSD": "ō",
+"O*PGSD": "Ō",
+"*EGSD": "ē",
+"*EUGSD": "ī",
+"*EUPGSD": "Ī",
+"*EPGSD": "Ē",
+"*UGSD": "ū",
+"*UPGSD": "Ū"
+}

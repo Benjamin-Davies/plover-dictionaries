@@ -2,6 +2,12 @@
 
 I live in New Zealand/Aotearoa, so I use a lot of Māori both for placenames and in my vernacular.
 
+## Suffix
+
+While it is possible to tweak this system to avoid conflicts with the default Plover vocabulary, it would still interfere with phrasing. Therefore, I have decided to take inspiration from Emily's Modifiers and suffix every stroke with "-GSD" (picture the tail of a waka).
+
+## Structure
+
 I have structured Māori words with one stroke per sylable/[mora](https://en.wikipedia.org/wiki/M%C4%81ori_phonology#Phonotactics) with the exception of long vowels and diphthongs. Māori sylables never have a final consonant, so these words are very left-hand heavy. 
 
 Consonants are always as written, so "wh" is stroked "WH-". "ng" is stroked "TKPW-" which is the chord for "g", as "g" never occurs on it own in a word.
@@ -23,9 +29,7 @@ Vowels are also as written, with the same chord for both long and short vowels.
 
 Any other combinations of vowels are split across separate moras. I have added briefs for the multisylabic affixes "whaka-" and "-tanga", but otherwise have made no effort to condense the length of words or phrases.
 
-Macrons are prefixed with "PH*BG" when fingerspelling (think MaCron).
-
-I have also made a minimal effort to avoid conflicts with Plover's default dictionaries.
+Vowels with macrons can be fingerspelt using the suffix. All other letters use their regular fingerspelling.
 
 ## Vocabulary
 
