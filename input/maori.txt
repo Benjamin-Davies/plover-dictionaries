@@ -1,7 +1,9 @@
+a
 arero
 ariki
 aroha
 awa
+e
 e noho
 e tū
 haere
@@ -19,6 +21,7 @@ ihi
 iti
 iwa
 iwi
+ka
 kaikōrero
 kaiwhai
 kākāriki
@@ -33,6 +36,8 @@ kaumatua
 kauri
 kauwae
 kea
+ki
+kia
 kia ora
 kikorangi
 kiwi
@@ -68,13 +73,18 @@ moana
 mōrena
 motu
 nau mai
+ngāi
 ngāi tātou
 niho
 noa
+noho
 nui
+o
 ono
+ora
 pā
 pae
+pai
 Pākehā
 paku
 pango
@@ -117,6 +127,7 @@ taonga
 tapu
 tara
 tātou
+tātou
 te
 teina
 tekau
@@ -130,6 +141,7 @@ tipuna
 toru
 toto
 tou
+tū
 tuahine
 tuakana
 tuatara
@@ -139,6 +151,7 @@ tūranga
 tūrangawaewae
 turi
 tūtae
+u
 uma
 upoko
 ure
@@ -147,6 +160,7 @@ wahine
 wai
 waiata
 waipororo
+wai-ū
 waka
 waru
 wehi
