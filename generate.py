@@ -32,12 +32,23 @@ def save_dict(filename: str, dictionary: dict[str, str]):
         json.dump(dictionary, file, ensure_ascii=False, indent=0)
 
 
-if __name__ == "__main__":
+def main():
+    """
+    Main function.
+    """
     # Regular Māori words.
     maori_words = read_words("input/maori.txt")
     d = {maori.steno_key(word): word for word in maori_words}
 
     d.update(read_dict("input/maori-briefs.json"))
+
+    # Include all possible sylables to avoid conflicts.
+    for c in maori.CONSONANTS:
+        for v in maori.VOWELS:
+            sylable = c + v
+            key = maori.steno_key(sylable)
+            if key not in d:
+                d[key] = sylable
 
     steno.validate_dictionary(d)
     d = steno.sort_dictionary(d)
@@ -60,3 +71,7 @@ if __name__ == "__main__":
     d = steno.sort_dictionary(d)
 
     save_dict("nz-place-names-english.json", d)
+
+
+if __name__ == "__main__":
+    main()

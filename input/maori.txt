@@ -17,6 +17,7 @@ hīkoi
 hoa
 horoi
 hui
+i
 ihi
 iti
 iwa
@@ -151,7 +152,7 @@ tūranga
 tūrangawaewae
 turi
 tūtae
-u
+ū
 uma
 upoko
 ure
