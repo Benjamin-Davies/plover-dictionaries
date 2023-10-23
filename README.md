@@ -4,7 +4,7 @@ I live in New Zealand/Aotearoa, so I use a lot of Māori both for placenames and
 
 ## Suffix
 
-While it is possible to tweak this system to avoid conflicts with the default Plover vocabulary, it would still interfere with phrasing. Therefore, I have decided to take inspiration from Emily's Modifiers and suffix every stroke with "-GSD" (picture the tail of a waka).
+While it is possible to tweak this system to avoid conflicts with the default Plover vocabulary, it would still interfere with phrasing. Therefore, I have decided to take inspiration from Emily's Modifiers and suffix most strokes with "-GSD" (picture the tail of a waka).
 
 ## Structure
 

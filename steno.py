@@ -1,10 +1,6 @@
 """
-Script to validate the keys of steno dictionaries. It also sorts the keys in
-steno order.
+Functions to validate and sort steno dictionaries.
 """
-
-import json
-import sys
 
 STENO_ORDER = "#STKPWHRAO*EUFRPBLGTSDZ"
 NUMBER_KEYS = "OSTPHAFPLT"
@@ -68,31 +64,22 @@ def is_steno_stroke(stroke: str) -> bool:
     return all((index != -1 for index in indices))
 
 
-def validate_dictionary(filename: str):
+def validate_dictionary(dictionary: dict[str, str]):
     """
-    Validates and sorts the keys of the given steno dictionary.
+    Validates the keys of the given steno dictionary.
+
+    >>> validate_dictionary({"H-L": "hello", "WORLD": "world"})
+    >>> validate_dictionary({"HI": "hello", "WOLRD": "world"})
+    Invalid key: HI
+    Invalid key: WOLRD
     """
-    print(f"Validating {filename}")
-
-    with open(filename, "r", encoding="utf8") as file:
-        dictionary: dict[str, str] = json.load(file)
-
-    keys = dictionary.keys()
-    for key in keys:
+    for key in dictionary.keys():
         if not all((is_steno_stroke(stroke) for stroke in key.split("/"))):
             print(f"Invalid key: {key}")
 
-    dictionary = dict(
-        sorted(dictionary.items(), key=lambda item: steno_indices(item[0]))
-    )
 
-    with open(filename, "w", encoding="utf8") as file:
-        json.dump(dictionary, file, indent=0, ensure_ascii=False)
-
-
-if __name__ == "__main__":
-    if len(sys.argv) <= 1:
-        print("Usage: python validate.py <filename> ...")
-        sys.exit(1)
-    for arg in sys.argv[1:]:
-        validate_dictionary(filename=arg)
+def sort_dictionary(dictionary: dict[str, str]) -> dict[str, str]:
+    """
+    Sorts the given steno dictionary into steno order.
+    """
+    return dict(sorted(dictionary.items(), key=lambda item: steno_indices(item[0])))
