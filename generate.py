@@ -3,6 +3,7 @@ Generates dictionaries from lists of Māori words.
 """
 
 import json
+import sys
 
 import maori
 import steno
@@ -71,6 +72,15 @@ def main():
     d = steno.sort_dictionary(d)
 
     save_dict("nz-place-names-english.json", d)
+
+    # Other dicts
+    for filename in ["bible-protestant.json"] + sys.argv[1:]:
+        d = read_dict(filename)
+
+        steno.validate_dictionary(d)
+        d = steno.sort_dictionary(d)
+
+        save_dict(filename, d)
 
 
 if __name__ == "__main__":
