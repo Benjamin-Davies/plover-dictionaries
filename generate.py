@@ -74,7 +74,7 @@ def main():
     save_dict("nz-place-names-english.json", d)
 
     # Other dicts
-    for filename in ["bible-protestant.json"] + sys.argv[1:]:
+    for filename in ["bible-protestant.json", "commands-extra.json"] + sys.argv[1:]:
         d = read_dict(filename)
 
         steno.validate_dictionary(d)
